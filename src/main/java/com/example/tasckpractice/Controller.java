@@ -14,7 +14,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -71,7 +70,7 @@ public class Controller {
     private void loginUser(String loginText, String loginPass) throws IOException {
         DatabaseHandler dbHandler = new DatabaseHandler();
         User user = new User();
-        user.setLocation(loginText);
+        user.setLogin(loginText);
         user.setPassword(loginPass);
         ResultSet result = dbHandler.getUser(user);
 

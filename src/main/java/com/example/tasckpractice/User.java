@@ -2,17 +2,19 @@ package com.example.tasckpractice;
 
 public class User {
     private String firstName;
+    private String lastname;
     private String number;
     private String mail;
-    private String location;
+    private String login;
     private String password;
     private String service;
 
-    public User(String firstName, String number, String mail, String location, String password, String service) {
+    public User(String firstName, String lastname, String number, String mail, String login, String password, String service) {
         this.firstName = firstName;
+        this.lastname = lastname;
         this.number = number;
         this.mail = mail;
-        this.location = location;
+        this.login = login;
         this.password = password;
         this.service = service;
     }
@@ -22,6 +24,12 @@ public class User {
     }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+    public String getLastName() {
+        return lastname;
+    }
+    public void setLastName(String lastname) {
+        this.lastname = lastname;
     }
     public String getNumber() {
         return number;
@@ -35,11 +43,11 @@ public class User {
     public void setMail(String mail) {
         this.mail = mail;
     }
-    public String getLocation() {
-        return location;
+    public String getLogin() {
+        return login;
     }
-    public void setLocation(String location) {
-        this.location = location;
+    public void setLogin(String login) {
+        this.login = login;
     }
     public String getPassword() {
         return password;

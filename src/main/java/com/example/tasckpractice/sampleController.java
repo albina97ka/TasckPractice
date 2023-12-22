@@ -20,6 +20,8 @@ public class sampleController {
     @FXML
     private TextField name_filed;
     @FXML
+    private TextField lastname_filed;
+    @FXML
     private TextField number_filed;
     @FXML
     private Button sampleButton;
@@ -60,6 +62,7 @@ public class sampleController {
         sampleButton.setOnAction(event ->{
 
             String firstName = name_filed.getText();
+            String lastName = lastname_filed.getText();
             String number = number_filed.getText();
             String mail = mail_filed.getText();
             String location = loginFiler.getText();
@@ -71,7 +74,7 @@ public class sampleController {
             else if (territory.isSelected()) {service="Планирование_территории";}
             else{service = "Дизайн_интерьера";}
 
-            User user = new User(firstName,number,mail,location,password,service);
+            User user = new User(firstName,lastName,number,mail,location,password,service);
             dbHandler.signUser(user);
 
         });
