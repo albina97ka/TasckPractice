@@ -243,11 +243,10 @@ public class Admin {
         String Time = TimeOfServiceCompletion.getText();
         String Cost = CostPerformingService.getText();
 
-        //если не работает создать новый класс
         if(!Name.equals("")&&!Registered.equals("")&&!Mail.equals("")&&!Phone.equals("")&&!Time.equals("")&&!Cost.equals("")){
-            Service Service = new Service(Name,Registered,Mail,Phone,Time,Cost);
-            dbHandler.signServiceAdmin(Service);
-            dbHandler.signService(Service);
+            ServicePerformed ServicePerformed = new ServicePerformed(Name,Registered,Mail,Phone,Time,Cost);
+            dbHandler.signServiceAdmin(ServicePerformed);
+            dbHandler.signService(ServicePerformed);
 
             Addservices.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
@@ -263,7 +262,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте коректность данных." +
+                    alert.setHeaderText("Проверьте корректность данных." +
                             "(Поле с ID должн бысть пустым)");
                     alert.showAndWait();
                 }

@@ -51,36 +51,52 @@ public class DatabaseHandler extends Config {
         }
         return reSet;
     }
-    public void signServiceAdmin (Service service){
-        String insert = "INSERT INTO " + Const.SERVICEADMIN_TABLE + "("+Const.SERVICEADMIN_LASTNAME + "," +
-                Const.SERVICEREGISTERED + "," + Const.USERMAILSERVICE + "," +Const.USERPHONESERVICE + "," +Const.USERTIMESERVICE + "," +Const.USERCOSTSERVICE + ")" + "VALUES(?,?,?,?,?,?)";
+    public void signService (Service_Table service_table){
+        String insert = "INSERT INTO " + Const.SERVICE_TABLE + "("+Const.SERVICE_CLIENTNAME + "," +
+                Const.SERVICE_CLIENTNUMBER + "," + Const.SERVICE_CLIENTMAIL + "," +Const.SERVICE_SERVICE + ")" + "VALUES(?,?,?,?)";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, service.getUserNameService());
-            prSt.setString(2, service.getServiceRegistered());
-            prSt.setString(3, service.getUserMailService());
-            prSt.setString(4, service.getUserPhoneService());
-            prSt.setString(5, service.getUserTimeServicee());
-            prSt.setString(6, service.getUserCostService());
+            prSt.setString(1, service_table.getLastName());
+            prSt.setString(2, service_table.getClientNumber());
+            prSt.setString(3, service_table.getClientMail());
+            prSt.setString(4, service_table.getService());
             prSt.executeUpdate();
         }
         catch (SQLException e) {throw new RuntimeException(e);}
         catch (ClassNotFoundException e) {throw new RuntimeException(e);}
 
     }
-    public void signService(Service service){
+    public void signServiceAdmin (ServicePerformed serviceperformed){
+        String insert = "INSERT INTO " + Const.SERVICEADMIN_TABLE + "("+Const.SERVICEADMIN_LASTNAME + "," +
+                Const.SERVICEREGISTERED + "," + Const.USERMAILSERVICE + "," +Const.USERPHONESERVICE + "," +Const.USERTIMESERVICE + "," +Const.USERCOSTSERVICE + ")" + "VALUES(?,?,?,?,?,?)";
+
+        try {
+            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
+            prSt.setString(1, serviceperformed.getName());
+            prSt.setString(2, serviceperformed.getRegistered());
+            prSt.setString(3, serviceperformed.getMail());
+            prSt.setString(4, serviceperformed.getPhone());
+            prSt.setString(5, serviceperformed.getTime());
+            prSt.setString(6, serviceperformed.getCost());
+            prSt.executeUpdate();
+        }
+        catch (SQLException e) {throw new RuntimeException(e);}
+        catch (ClassNotFoundException e) {throw new RuntimeException(e);}
+
+    }
+    public void signService(ServicePerformed serviceperformed){
         String insert = "INSERT INTO " + Const.SERVICEADMIN_TABLE_ARCHIVE + "("+Const.SERVICEADMIN_LASTNAME_ARCHIVE + "," +
                 Const.SERVICEREGISTERED_ARCHIVE + "," + Const.USERMAILSERVICE_ARCHIVE + "," +Const.USERPHONESERVICE_ARCHIVE + "," +Const.USERTIMESERVICE_ARCHIVE + "," +Const.USERCOSTSERVICE_ARCHIVE + ")" + "VALUES(?,?,?,?,?,?)";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, service.getUserNameService());
-            prSt.setString(2, service.getServiceRegistered());
-            prSt.setString(3, service.getUserMailService());
-            prSt.setString(4, service.getUserPhoneService());
-            prSt.setString(5, service.getUserTimeServicee());
-            prSt.setString(6, service.getUserCostService());
+            prSt.setString(1, serviceperformed.getName());
+            prSt.setString(2, serviceperformed.getRegistered());
+            prSt.setString(3, serviceperformed.getMail());
+            prSt.setString(4, serviceperformed.getPhone());
+            prSt.setString(5, serviceperformed.getTime());
+            prSt.setString(6, serviceperformed.getCost());
             prSt.executeUpdate();
         }
         catch (SQLException e) {throw new RuntimeException(e);}
