@@ -151,7 +151,6 @@ public class Admin {
 
         TableServ.setItems(list_Archive);
     }
-
     private void ClikUpdateService() {
         DatabaseHandler dbHandler = new DatabaseHandler();
 
@@ -167,7 +166,6 @@ public class Admin {
 
         TableServices.setItems(list_Service);
     }
-
     private void ClikUpdateApplications() {
         DatabaseHandler dbHandler = new DatabaseHandler();
 
@@ -181,7 +179,6 @@ public class Admin {
 
         TadleApplications.setItems(list_Applications);
     }
-
     private void ClikUpdateUser() {
         DatabaseHandler dbHandler = new DatabaseHandler();
 
@@ -195,7 +192,6 @@ public class Admin {
 
         TableUserData.setItems(list_users);
     }
-
     @FXML
     void initialize() {
         Exit.setOnAction(event -> {
@@ -252,7 +248,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Услуга зарегистрирована.");
+                    alert.setHeaderText("Услуга зарегистрирована");
                     alert.showAndWait();
                 }
             });
@@ -262,7 +258,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте корректность данных." +
+                    alert.setHeaderText("Проверьте корректность данных" +
                             "(Поле с ID должн бысть пустым)");
                     alert.showAndWait();
                 }
@@ -287,7 +283,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Пользователь добавлен.");
+                    alert.setHeaderText("Пользователь добавлен");
                     alert.showAndWait();
                 }
             });
@@ -297,7 +293,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте корректность данных." +
+                    alert.setHeaderText("Проверьте корректность данных" +
                             "(Поле с ID должно бысть пустым)");
                     alert.showAndWait();
                 }
@@ -323,7 +319,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Заявка удалена.");
+                    alert.setHeaderText("Заявка удалена");
                     alert.showAndWait();
                 }
             });
@@ -333,7 +329,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте коректность данных." +
+                    alert.setHeaderText("Проверьте коректность данных" +
                             "(Только поле с ID должно быть заполнено)");
                     alert.showAndWait();
                 }
@@ -359,7 +355,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Пользователь удалён.");
+                    alert.setHeaderText("Пользователь удалён");
                     alert.showAndWait();
                 }
             });
@@ -369,7 +365,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте коректность данных." +
+                    alert.setHeaderText("Проверьте коректность данных" +
                             "(Только поле с ID должно быть заполнено)");
                     alert.showAndWait();
                 }
@@ -393,7 +389,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Заявка удалена.");
+                    alert.setHeaderText("Заявка удалена");
                     alert.showAndWait();
                 }
             });
@@ -403,7 +399,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Проверьте коректность данных.");
+                    alert.setHeaderText("Проверьте корректность данных");
                     alert.showAndWait();
                 }
             });
