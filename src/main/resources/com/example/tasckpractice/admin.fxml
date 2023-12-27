@@ -7,6 +7,8 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -38,12 +40,12 @@
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Label alignment="CENTER" graphicTextGap="3.0" layoutX="254.0" layoutY="6.0" text="Автор" textAlignment="CENTER">
-                            <font>
-                                <Font name="Serif Regular" size="35.0" />
-                            </font>
-                        </Label>
                         <Button fx:id="UpdateUser" layoutX="62.0" layoutY="332.0" mnemonicParsing="false" text="Обновить" />
+                  <ImageView fitHeight="65.0" fitWidth="134.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+                     </image>
+                  </ImageView>
                     </children></AnchorPane>
             </content>
         </Tab>
@@ -63,12 +65,12 @@
                             </columns>
                         </TableView>
                         <Button fx:id="DeleteApplications" layoutX="438.0" layoutY="103.0" mnemonicParsing="false" text="Удалить" />
-                        <Label alignment="CENTER" graphicTextGap="3.0" layoutX="256.0" layoutY="23.0" text="Автор" textAlignment="CENTER">
-                            <font>
-                                <Font name="Serif Regular" size="35.0" />
-                            </font>
-                        </Label>
                         <TextField fx:id="IDApplications" layoutX="228.0" layoutY="103.0" promptText="ID" />
+                  <ImageView fitHeight="64.0" fitWidth="128.0" layoutX="238.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+                     </image>
+                  </ImageView>
                     </children></AnchorPane>
             </content>
         </Tab>
@@ -100,13 +102,13 @@
                                 <TableColumn fx:id="UserCostServiceTable" prefWidth="79.0" text="Стоимость" />
                             </columns>
                         </TableView>
-                        <Label alignment="CENTER" graphicTextGap="3.0" layoutX="230.0" layoutY="14.0" text="Автор" textAlignment="CENTER">
-                            <font>
-                                <Font name="Serif Regular" size="53.0" />
-                            </font>
-                        </Label>
                         <TextField fx:id="Id" layoutX="437.0" layoutY="127.0" promptText="ID" />
                         <Button fx:id="ObService" layoutX="353.0" layoutY="173.0" mnemonicParsing="false" text="Обновить " />
+                  <ImageView fitHeight="63.0" fitWidth="133.0" layoutX="239.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+                     </image>
+                  </ImageView>
                     </children>
                 </AnchorPane>
             </content>

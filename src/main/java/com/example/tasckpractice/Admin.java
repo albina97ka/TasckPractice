@@ -248,7 +248,7 @@ public class Admin {
                 @Override
                 public void handle(ActionEvent actionEvent) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Услуга зарегистрирована");
+                    alert.setHeaderText("Заявка зарегистрирована");
                     alert.showAndWait();
                 }
             });
@@ -263,9 +263,7 @@ public class Admin {
                     alert.showAndWait();
                 }
             });
-
         }
-
     }
     // Добавление пользователя
     private void signUser() {
@@ -334,9 +332,7 @@ public class Admin {
                     alert.showAndWait();
                 }
             });
-
         }
-
     }
     //удаление аккаунта
     private void deletingId() throws SQLException, ClassNotFoundException {

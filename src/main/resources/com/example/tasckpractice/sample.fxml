@@ -5,40 +5,39 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.sampleController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.sampleController">
     <children>
-        <AnchorPane layoutY="108.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
-            <children>
-                <Button fx:id="sampleButton" layoutX="244.0" layoutY="247.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="213.0" style="-fx-background-color: #2E3348;" text="Подать заявку" textFill="#fff1f1">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Button>
-                <TextField fx:id="name_filed" layoutX="147.0" layoutY="56.0" prefHeight="25.0" prefWidth="195.0" promptText="Имя" />
-                <TextField fx:id="number_filed" layoutX="147.0" layoutY="120.0" prefHeight="25.0" prefWidth="195.0" promptText="Номер телефона" />
-                <TextField fx:id="mail_filed" layoutX="147.0" layoutY="154.0" prefHeight="25.0" prefWidth="195.0" promptText="Электронная почта" />
-                <Label layoutX="300.0" layoutY="14.0" style="-fx-background-color: #fafafa;" text="Заказчик">
-                    <font>
-                        <Font size="24.0" />
-                    </font>
-                </Label>
-                <CheckBox fx:id="apartment" layoutX="360.0" layoutY="51.0" mnemonicParsing="false" selected="true" text="Жилые многоквартирные дома" />
-                <CheckBox fx:id="residential" layoutX="360.0" layoutY="72.0" mnemonicParsing="false" text="Индивидуальнные жилые дома" />
-                <CheckBox fx:id="public_buildings" layoutX="360.0" layoutY="99.0" mnemonicParsing="false" text="Общественные здания" />
-                <CheckBox fx:id="territory" layoutX="360.0" layoutY="124.0" mnemonicParsing="false" text="Планирование территории " />
-                <CheckBox fx:id="design" layoutX="360.0" layoutY="149.0" mnemonicParsing="false" text="Дизайн интерьера" />
-            <TextField fx:id="loginFiler" layoutX="253.0" layoutY="184.0" prefHeight="25.0" prefWidth="195.0" promptText="Логин" />
-            <TextField fx:id="lastname_filed" layoutX="147.0" layoutY="87.0" prefHeight="25.0" prefWidth="195.0" promptText="Фамилия" />
-            <PasswordField fx:id="passwordField" layoutX="253.0" layoutY="216.0" prefHeight="25.0" prefWidth="195.0" promptText="Пароль" />
-            </children></AnchorPane>
-        <Label layoutX="240.0" layoutY="31.0" prefHeight="53.0" prefWidth="221.0" text="Авторизация" textAlignment="CENTER" textFill="#f8eeee">
-            <font>
-                <Font size="36.0" />
-            </font>
-        </Label>
-        <Button fx:id="back" layoutX="634.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #2E3348;" text="Назад" textFill="#f5ebeb" />
+      <PasswordField fx:id="passwordField" layoutX="253.0" layoutY="307.0" prefHeight="25.0" prefWidth="195.0" promptText="Пароль" />
+          <Button fx:id="sampleButton" layoutX="244.0" layoutY="347.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="213.0" style="-fx-background-color: #2E3348;" text="Подать заявку" textFill="#fff1f1">
+              <font>
+                  <Font size="18.0" />
+              </font>
+          </Button>
+          <TextField fx:id="name_filed" layoutX="137.0" layoutY="132.0" prefHeight="25.0" prefWidth="195.0" promptText="Имя" />
+          <TextField fx:id="number_filed" layoutX="137.0" layoutY="200.0" prefHeight="25.0" prefWidth="195.0" promptText="Номер телефона" />
+          <TextField fx:id="mail_filed" layoutX="137.0" layoutY="231.0" prefHeight="25.0" prefWidth="195.0" promptText="Электронная почта" />
+          <Label layoutX="301.0" layoutY="65.0" style="-fx-background-color: #fafafa;" text="Заказчик">
+              <font>
+                  <Font size="24.0" />
+              </font>
+          </Label>
+          <CheckBox fx:id="apartment" layoutX="395.0" layoutY="132.0" mnemonicParsing="false" text="Жилые многоквартирные дома" />
+          <CheckBox fx:id="residential" layoutX="395.0" layoutY="157.0" mnemonicParsing="false" text="Индивидуальнные жилые дома" />
+          <CheckBox fx:id="public_buildings" layoutX="396.0" layoutY="182.0" mnemonicParsing="false" text="Общественные здания" />
+          <CheckBox fx:id="territory" layoutX="396.0" layoutY="231.0" mnemonicParsing="false" text="Планирование территории " />
+          <CheckBox fx:id="design" layoutX="396.0" layoutY="204.0" mnemonicParsing="false" text="Дизайн интерьера" />
+      <TextField fx:id="loginFiler" layoutX="253.0" layoutY="268.0" prefHeight="25.0" prefWidth="195.0" promptText="Логин" />
+      <TextField fx:id="lastname_filed" layoutX="137.0" layoutY="165.0" prefHeight="25.0" prefWidth="195.0" promptText="Фамилия" />
+      <ImageView fitHeight="101.0" fitWidth="195.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+         </image>
+      </ImageView>
+        <Button fx:id="back" layoutX="603.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #2E3348;" text="Назад" textFill="#f5ebeb" />
     </children>
 </AnchorPane>

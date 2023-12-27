@@ -4,35 +4,33 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.Controller">
     <children>
-        <AnchorPane layoutY="102.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #fafafa;">
-            <children>
-                <Label layoutY="14.0" prefHeight="286.0" prefWidth="700.0" />
-                <TextField fx:id="UserLogin" layoutX="252.0" layoutY="98.0" prefHeight="25.0" prefWidth="196.0" promptText="Логин" />
-                <Button fx:id="adminButton" layoutX="300.0" layoutY="199.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="100.0" style="-fx-background-color: #2E3348;" text="Войти" textFill="#fcf3f3">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Button>
-                <Label layoutX="278.0" layoutY="37.0" text="Авторизация">
-                    <font>
-                        <Font size="24.0" />
-                    </font>
-                </Label>
-                <PasswordField fx:id="UserPass" layoutX="252.0" layoutY="145.0" prefHeight="25.0" prefWidth="196.0" promptText="Пароль" />
-            </children></AnchorPane>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="19.0" prefHeight="70.0" prefWidth="182.0" text="Автор" textAlignment="CENTER" textFill="#e4dddd" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="206.0" AnchorPane.rightAnchor="206.0">
-            <font>
-                <Font name="System Italic" size="48.0" />
-            </font>
-        </Label>
-        <Button fx:id="applicationButton" layoutX="544.0" layoutY="14.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="142.0" style="-fx-background-color: #4e5983;" text="Подать заявку" textFill="#f6f7fc" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+        <Button fx:id="applicationButton" layoutX="468.0" layoutY="339.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="142.0" style="-fx-background-color: #2E3348;" text="Подать заявку" textFill="#f6f7fc" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="339.0">
             <font>
                 <Font size="14.0" />
             </font></Button>
+          <TextField fx:id="UserLogin" layoutX="441.0" layoutY="215.0" prefHeight="25.0" prefWidth="196.0" promptText="Логин" />
+          <Button fx:id="adminButton" layoutX="468.0" layoutY="299.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #2E3348;" text="Войти" textFill="#fcf3f3">
+              <font>
+                  <Font size="14.0" />
+              </font>
+          </Button>
+          <Label layoutX="467.0" layoutY="153.0" text="Авторизация">
+              <font>
+                  <Font size="24.0" />
+              </font>
+          </Label>
+          <PasswordField fx:id="UserPass" layoutX="441.0" layoutY="255.0" prefHeight="25.0" prefWidth="196.0" promptText="Пароль" />
+        <ImageView fitHeight="211.0" fitWidth="400.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+         </image>
+        </ImageView>
     </children>
 </AnchorPane>
