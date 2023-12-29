@@ -51,25 +51,9 @@ public class DatabaseHandler extends Config {
         }
         return reSet;
     }
-    public void signService (Service_Table service_table){
-        String insert = "INSERT INTO " + Const.SERVICE_TABLE + "("+Const.SERVICE_CLIENTNAME + "," +
-                Const.SERVICE_CLIENTNUMBER + "," + Const.SERVICE_CLIENTMAIL + "," +Const.SERVICE_SERVICE + ")" + "VALUES(?,?,?,?)";
-
-        try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(insert);
-            prSt.setString(1, service_table.getLastName());
-            prSt.setString(2, service_table.getClientNumber());
-            prSt.setString(3, service_table.getClientMail());
-            prSt.setString(4, service_table.getService());
-            prSt.executeUpdate();
-        }
-        catch (SQLException e) {throw new RuntimeException(e);}
-        catch (ClassNotFoundException e) {throw new RuntimeException(e);}
-
-    }
     public void signServiceAdmin (ServicePerformed serviceperformed){
         String insert = "INSERT INTO " + Const.SERVICEADMIN_TABLE + "("+Const.SERVICEADMIN_LASTNAME + "," +
-                Const.SERVICEREGISTERED + "," + Const.USERMAILSERVICE + "," +Const.USERPHONESERVICE + "," +Const.USERTIMESERVICE + "," +Const.USERCOSTSERVICE + ")" + "VALUES(?,?,?,?,?,?)";
+                Const.SERVICEREGISTERED + "," + Const.USERMAILSERVICE + "," +Const.USERPHONESERVICE +  "," +Const.USERCOSTSERVICE + ")" + "VALUES(?,?,?,?,?)";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -77,8 +61,7 @@ public class DatabaseHandler extends Config {
             prSt.setString(2, serviceperformed.getRegistered());
             prSt.setString(3, serviceperformed.getMail());
             prSt.setString(4, serviceperformed.getPhone());
-            prSt.setString(5, serviceperformed.getTime());
-            prSt.setString(6, serviceperformed.getCost());
+            prSt.setString(5, serviceperformed.getCost());
             prSt.executeUpdate();
         }
         catch (SQLException e) {throw new RuntimeException(e);}
@@ -87,7 +70,7 @@ public class DatabaseHandler extends Config {
     }
     public void signService(ServicePerformed serviceperformed){
         String insert = "INSERT INTO " + Const.SERVICEADMIN_TABLE_ARCHIVE + "("+Const.SERVICEADMIN_LASTNAME_ARCHIVE + "," +
-                Const.SERVICEREGISTERED_ARCHIVE + "," + Const.USERMAILSERVICE_ARCHIVE + "," +Const.USERPHONESERVICE_ARCHIVE + "," +Const.USERTIMESERVICE_ARCHIVE + "," +Const.USERCOSTSERVICE_ARCHIVE + ")" + "VALUES(?,?,?,?,?,?)";
+                Const.SERVICEREGISTERED_ARCHIVE + "," + Const.USERMAILSERVICE_ARCHIVE + "," + Const.USERPHONESERVICE_ARCHIVE + "," +Const.USERCOSTSERVICE_ARCHIVE + ")" + "VALUES(?,?,?,?,?)";
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -95,15 +78,14 @@ public class DatabaseHandler extends Config {
             prSt.setString(2, serviceperformed.getRegistered());
             prSt.setString(3, serviceperformed.getMail());
             prSt.setString(4, serviceperformed.getPhone());
-            prSt.setString(5, serviceperformed.getTime());
-            prSt.setString(6, serviceperformed.getCost());
+            prSt.setString(5, serviceperformed.getCost());
             prSt.executeUpdate();
         }
         catch (SQLException e) {throw new RuntimeException(e);}
         catch (ClassNotFoundException e) {throw new RuntimeException(e);}
 
     }
-    public void deletingLine ( Deleting deleting) throws SQLException, ClassNotFoundException {
+    public void deletingLine (Deleting deleting) throws SQLException, ClassNotFoundException {
         String insert = "DELETE FROM " + deleting.getName() + " WHERE "+ deleting.getNameId()+" = " + deleting.getID() +";";
 
         PreparedStatement prSt = getDbConnection().prepareStatement(insert);
@@ -119,7 +101,8 @@ public class DatabaseHandler extends Config {
 
             while (resultSet.next()){
                 list_users.add(new users(resultSet.getInt("idusers"), resultSet.getString("name"),
-                        resultSet.getString("lastname"), resultSet.getString("login"), resultSet.getString("password")));
+                        resultSet.getString("lastname"),resultSet.getString("number"), resultSet.getString("mail"), resultSet.getString("login"),
+                        resultSet.getString("password"), resultSet.getString("service")));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -128,36 +111,18 @@ public class DatabaseHandler extends Config {
         }
         return list_users;
     }
-    public ObservableList<Applications> Get_All_Applications() {
-        String select = "SELECT * FROM userrequests";
-        ObservableList<Applications> list_Applications = FXCollections.observableArrayList();
-
-        try {
-            PreparedStatement prSt = getDbConnection().prepareStatement(select);
-            ResultSet resultSet = prSt.executeQuery();
-
-            while (resultSet.next()){
-                list_Applications.add(new Applications(resultSet.getInt("iduserrequests"), resultSet.getString("ClientName"),
-                        resultSet.getString("ClientNumber"), resultSet.getString("ClientMail"), resultSet.getString("ApplicationService")));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        return list_Applications;
-    }
     public ObservableList<Service> Get_All_Service() {
-        String select = "SELECT * FROM RegisteredService";
+        String select = "SELECT * FROM registeredservice";
         ObservableList<Service> list_Service = FXCollections.observableArrayList();
 
         try {
             PreparedStatement prSt = getDbConnection().prepareStatement(select);
             ResultSet resultSet = prSt.executeQuery();
-
             while (resultSet.next()){
                 list_Service.add(new Service(resultSet.getInt("idRegisteredService"), resultSet.getString("UserNameService"),
-                        resultSet.getString("ServiceRegistered"),resultSet.getString("UserMailService"), resultSet.getString("UserPhoneService"), resultSet.getString("UserTimeService"),resultSet.getString("UserCostService")));
+                        resultSet.getString("ServiceRegistered"),resultSet.getString("UserMailService"),
+                        resultSet.getString("UserPhoneService"), resultSet.getString("UserTimeService"),
+                        resultSet.getString("UserCostService")));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -167,7 +132,7 @@ public class DatabaseHandler extends Config {
         return list_Service;
     }
     public ObservableList<Service> Get_All_Service_Archive() {
-        String select = "SELECT * FROM Archive";
+        String select = "SELECT * FROM archive";
         ObservableList<Service> list_Archive = FXCollections.observableArrayList();
 
         try {
@@ -176,7 +141,7 @@ public class DatabaseHandler extends Config {
             ResultSet resultSet = prSt.executeQuery();
 
             while (resultSet.next()){
-                list_Archive.add(new Service(resultSet.getInt("idRegisteredService_Archive"), resultSet.getString("UserNameService_Archive"),
+                list_Archive.add(new Service(resultSet.getInt("idArchive"), resultSet.getString("UserNameService_Archive"),
                         resultSet.getString("ServiceRegistered_Archive"),resultSet.getString("UserMailService_Archive"), resultSet.getString("UserPhoneService_Archive"), resultSet.getString("UserTimeService_Archive"),resultSet.getString("UserCostService_Archive")));
             }
         } catch (SQLException e) {

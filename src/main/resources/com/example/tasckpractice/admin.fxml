@@ -18,57 +18,30 @@
             <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                     <children>
-                        <TableView fx:id="TableUserData" layoutX="194.0" layoutY="86.0" prefHeight="200.0" prefWidth="391.0">
+                        <TableView fx:id="TableUserData" layoutX="12.0" layoutY="150.0" prefHeight="200.0" prefWidth="576.0">
                             <columns>
-                                <TableColumn fx:id="IDTableData" prefWidth="34.0" text="ID" />
-                                <TableColumn fx:id="UserLastNameTableData" prefWidth="111.0" text="Фамилия" />
-                                <TableColumn fx:id="UserNameTableData" prefWidth="74.0" text="Имя" />
-                                <TableColumn fx:id="UserLoginTableData" prefWidth="94.0" text="Логин" />
-                                <TableColumn fx:id="UserPasswordTableData" prefWidth="77.0" text="Пароль" />
+                                <TableColumn fx:id="IDTableData" prefWidth="24.0" text="ID" />
+                                <TableColumn fx:id="UserNameTableData" prefWidth="60.0" text="Имя" />
+                                <TableColumn fx:id="UserLastNameTableData" prefWidth="85.0" text="Фамилия" />
+                        <TableColumn fx:id="NumberTableData" prefWidth="94.0" text="Номер" />
+                        <TableColumn fx:id="MailTableData" prefWidth="86.0" text="Почта" />
+                                <TableColumn fx:id="UserLoginTableData" prefWidth="78.0" text="Логин" />
+                                <TableColumn fx:id="UserPasswordTableData" text="Пароль" />
+                        <TableColumn fx:id="ServiceTableData" prefWidth="68.0" text="Услуга" />
                             </columns>
                         </TableView>
                         <Button fx:id="Exit" layoutX="535.0" layoutY="13.0" mnemonicParsing="false" text="Выход" />
-                        <TextField fx:id="UserID" layoutX="23.0" layoutY="86.0" promptText="ID" />
-                        <TextField fx:id="UserLogin" layoutX="22.0" layoutY="216.0" promptText="Логин" />
-                        <TextField fx:id="UserName" layoutX="22.0" layoutY="174.0" promptText="Имя" />
-                        <TextField fx:id="UserLastName" layoutX="22.0" layoutY="128.0" prefHeight="24.0" prefWidth="149.0" promptText="Фамилия" />
-                        <TextField fx:id="UserPassword" layoutX="22.0" layoutY="261.0" promptText="Пароль" />
-                        <Button fx:id="Add" layoutX="22.0" layoutY="298.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Добавить" />
-                        <Button fx:id="Removce" layoutX="108.0" layoutY="299.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Удалить " />
-                        <Label layoutX="325.0" layoutY="54.0" text="Таблица с данными.">
+                        <TextField fx:id="UserID" layoutX="226.0" layoutY="53.0" promptText="ID" />
+                        <Button fx:id="Removce" layoutX="365.0" layoutY="91.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Удалить " />
+                        <Label layoutX="235.0" layoutY="116.0" text="Таблица с данными.">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <Button fx:id="UpdateUser" layoutX="62.0" layoutY="332.0" mnemonicParsing="false" text="Обновить" />
+                        <Button fx:id="UpdateUser" layoutX="164.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#UpdateUser" text="Обновить" />
                   <ImageView fitHeight="65.0" fitWidth="134.0" layoutX="23.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
-                     </image>
-                  </ImageView>
-                    </children></AnchorPane>
-            </content>
-        </Tab>
-        <Tab text="Заявки">
-            <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                    <children>
-                        <Button fx:id="UpdateApplications" layoutX="98.0" layoutY="103.0" mnemonicParsing="false" text="Обновить" />
-                        <Label layoutX="169.0" layoutY="78.0" text="Ввод ID для удаления Заявки после её регистрации." />
-                        <TableView fx:id="TadleApplications" layoutX="2.0" layoutY="152.0" prefHeight="219.0" prefWidth="600.0">
-                            <columns>
-                                <TableColumn fx:id="IDTableApplications" prefWidth="44.0" text="ID" />
-                                <TableColumn fx:id="ClientNameApplications" prefWidth="106.0" text="Имя" />
-                                <TableColumn fx:id="CustomerNumberApplications" prefWidth="137.0" text="Номер Телефона" />
-                                <TableColumn fx:id="ClientMailApplications" prefWidth="155.0" text="Электронная почта" />
-                                <TableColumn fx:id="ServiceApplications" prefWidth="153.0" text="Услуга" />
-                            </columns>
-                        </TableView>
-                        <Button fx:id="DeleteApplications" layoutX="438.0" layoutY="103.0" mnemonicParsing="false" text="Удалить" />
-                        <TextField fx:id="IDApplications" layoutX="228.0" layoutY="103.0" promptText="ID" />
-                  <ImageView fitHeight="64.0" fitWidth="128.0" layoutX="238.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+                        <Image url="@050d6856cc597f8cb18539f212d26fb1.jpg" />
                      </image>
                   </ImageView>
                     </children></AnchorPane>
@@ -94,19 +67,18 @@
                         <TableView fx:id="TableServices" layoutY="224.0" prefHeight="147.0" prefWidth="600.0">
                             <columns>
                                 <TableColumn fx:id="IDTableServices" prefWidth="39.0" text="ID" />
-                                <TableColumn fx:id="UserNameServiceTable" prefWidth="86.0" text="Имя" />
-                                <TableColumn fx:id="ServiceRegisteredTable" prefWidth="95.0" text="Услуга" />
-                                <TableColumn fx:id="UserMailServiceTable" prefWidth="115.0" text="Почта" />
+                                <TableColumn fx:id="UserNameServiceTable" prefWidth="121.0" text="Имя" />
+                                <TableColumn fx:id="ServiceRegisteredTable" prefWidth="144.0" text="Услуга" />
+                                <TableColumn fx:id="UserMailServiceTable" prefWidth="101.0" text="Почта" />
                                 <TableColumn fx:id="UserPhoneServiceTable" prefWidth="113.0" text="Телефон" />
-                                <TableColumn fx:id="UserTimeServiceTable" prefWidth="72.0" text="Срок" />
-                                <TableColumn fx:id="UserCostServiceTable" prefWidth="79.0" text="Стоимость" />
+                                <TableColumn fx:id="UserCostServiceTable" prefWidth="81.0" text="Стоимость" />
                             </columns>
                         </TableView>
                         <TextField fx:id="Id" layoutX="437.0" layoutY="127.0" promptText="ID" />
-                        <Button fx:id="ObService" layoutX="353.0" layoutY="173.0" mnemonicParsing="false" text="Обновить " />
+                        <Button fx:id="ObService" layoutX="353.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#UpdateService" text="Обновить " />
                   <ImageView fitHeight="63.0" fitWidth="133.0" layoutX="239.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+                        <Image url="@050d6856cc597f8cb18539f212d26fb1.jpg" />
                      </image>
                   </ImageView>
                     </children>
@@ -124,16 +96,15 @@
                         </Label>
                         <TableView fx:id="TableServ" layoutX="7.0" layoutY="81.0" prefHeight="301.0" prefWidth="588.0">
                             <columns>
-                                <TableColumn fx:id="IDTab" prefWidth="61.0" text="ID" />
-                                <TableColumn fx:id="NameServiceTable" prefWidth="72.0" text="Имя" />
-                                <TableColumn fx:id="ServiceReg" prefWidth="106.0" text="Услуга" />
-                                <TableColumn fx:id="MailServ" prefWidth="72.0" text="Почта" />
-                                <TableColumn fx:id="PhoneServic" prefWidth="89.0" text="Телефон" />
-                                <TableColumn fx:id="Time" prefWidth="115.0" text="Срок" />
-                                <TableColumn fx:id="CostSer" prefWidth="72.0" text="Цена" />
+                                <TableColumn fx:id="IDTab" prefWidth="52.0" text="ID" />
+                                <TableColumn fx:id="NameServiceTable" prefWidth="118.0" text="Имя" />
+                                <TableColumn fx:id="ServiceReg" prefWidth="117.0" text="Услуга" />
+                                <TableColumn fx:id="MailServ" prefWidth="95.0" text="Почта" />
+                                <TableColumn fx:id="PhoneServic" prefWidth="111.0" text="Телефон" />
+                                <TableColumn fx:id="CostSer" prefWidth="94.0" text="Цена" />
                             </columns>
                         </TableView>
-                        <Button fx:id="obArchive" layoutX="444.0" layoutY="34.0" mnemonicParsing="false" text="Обновить" />
+                        <Button fx:id="obArchive" layoutX="444.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#UpdateService_Archive" text="Обновить" />
                     </children>
                 </AnchorPane>
             </content>

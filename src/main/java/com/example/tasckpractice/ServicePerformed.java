@@ -5,15 +5,13 @@ public class ServicePerformed {
     private String Registered;
     private String Mail;
     private String Phone;
-    private String Time;
     private String Cost;
 
-    public ServicePerformed(String name, String registered, String mail, String phone, String time, String cost) {
+    public ServicePerformed(String name, String registered, String mail, String phone, String cost) {
         this.name = name;
         Registered = registered;
         Mail = mail;
         Phone = phone;
-        Time = time;
         Cost = cost;
     }
 
@@ -39,15 +37,7 @@ public class ServicePerformed {
     public void setPhone(String phone) {
         Phone = phone;
     }
-    public String getTime() {
-        return Time;
-    }
-    public void setTime(String time) {
-        Time = time;
-    }
-    public String getCost() {
-        return Cost;
-    }
+    public String getCost() {return Cost;}
     public void setCost(String cost) {
         Cost = cost;
     }

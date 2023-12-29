@@ -35,7 +35,7 @@
       <TextField fx:id="lastname_filed" layoutX="137.0" layoutY="165.0" prefHeight="25.0" prefWidth="195.0" promptText="Фамилия" />
       <ImageView fitHeight="101.0" fitWidth="195.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../050d6856cc597f8cb18539f212d26fb1.jpg" />
+            <Image url="@050d6856cc597f8cb18539f212d26fb1.jpg" />
          </image>
       </ImageView>
         <Button fx:id="back" layoutX="603.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="83.0" style="-fx-background-color: #2E3348;" text="Назад" textFill="#f5ebeb" />

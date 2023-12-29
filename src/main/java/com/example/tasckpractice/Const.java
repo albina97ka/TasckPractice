@@ -11,13 +11,6 @@ public class Const {
     public static final String USER_LOGIN = "login";
     public static final String USER_PASSWORD = "password";
     public static final String USER_SERVICE = "service";
-    //База данных информация о заявках
-    public static final String SERVICE_TABLE ="userrequests";
-    public static final String SERVICE_ID="iduserrequests";
-    public static final String SERVICE_CLIENTNAME="ClientName";
-    public static final String SERVICE_CLIENTNUMBER="ClientNumber";
-    public static final String SERVICE_CLIENTMAIL="ClientMail";
-    public static final String SERVICE_SERVICE="ApplicationService";
     //База данных зарегистрированных заявок
     public static final String SERVICEADMIN_TABLE="registeredservice";
     public static final String SERVICEADMIN_ID="idRegisteredService";
@@ -25,7 +18,6 @@ public class Const {
     public static final String SERVICEREGISTERED="ServiceRegistered";
     public static final String USERMAILSERVICE="UserMailService";
     public static final String USERPHONESERVICE="UserPhoneService";
-    public static final String USERTIMESERVICE="UserTimeService";
     public static final String USERCOSTSERVICE="UserCostService";
     //Архив зарегистрированных заявок
     public static final String SERVICEADMIN_TABLE_ARCHIVE="archive";
@@ -34,6 +26,5 @@ public class Const {
     public static final String SERVICEREGISTERED_ARCHIVE="ServiceRegistered_Archive";
     public static final String USERMAILSERVICE_ARCHIVE="UserMailService_Archive";
     public static final String USERPHONESERVICE_ARCHIVE="UserPhoneService_Archive";
-    public static final String USERTIMESERVICE_ARCHIVE="UserTimeService_Archive";
     public static final String USERCOSTSERVICE_ARCHIVE="UserCostService_Archive";
 }
