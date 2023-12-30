@@ -121,7 +121,7 @@ public class DatabaseHandler extends Config {
             while (resultSet.next()){
                 list_Service.add(new Service(resultSet.getInt("idRegisteredService"), resultSet.getString("UserNameService"),
                         resultSet.getString("ServiceRegistered"),resultSet.getString("UserMailService"),
-                        resultSet.getString("UserPhoneService"), resultSet.getString("UserTimeService"),
+                        resultSet.getString("UserPhoneService"),
                         resultSet.getString("UserCostService")));
             }
         } catch (SQLException e) {
@@ -142,7 +142,7 @@ public class DatabaseHandler extends Config {
 
             while (resultSet.next()){
                 list_Archive.add(new Service(resultSet.getInt("idArchive"), resultSet.getString("UserNameService_Archive"),
-                        resultSet.getString("ServiceRegistered_Archive"),resultSet.getString("UserMailService_Archive"), resultSet.getString("UserPhoneService_Archive"), resultSet.getString("UserTimeService_Archive"),resultSet.getString("UserCostService_Archive")));
+                        resultSet.getString("ServiceRegistered_Archive"),resultSet.getString("UserMailService_Archive"), resultSet.getString("UserPhoneService_Archive"), resultSet.getString("UserCostService_Archive")));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

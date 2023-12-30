@@ -53,8 +53,8 @@ public class users {
     }
     public users(int IDTableData, String userLastNameTableData, String userNameTableData,String numberTableData, String mailTableData, String userLoginTableData, String userPasswordTableData,String serviceTableData) {
         this.IDTableData = IDTableData;
-        this.UserLastNameTableData = userLastNameTableData;
         this.UserNameTableData = userNameTableData;
+        this.UserLastNameTableData = userLastNameTableData;
         this.NumberTableData = numberTableData;
         this.MailTableData = mailTableData;
         this.UserLoginTableData = userLoginTableData;

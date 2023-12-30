@@ -208,10 +208,9 @@ public class Admin {
         String Registered = ServiceRegistered.getText();
         String Mail = UserMailService.getText();
         String Phone = UserPhoneService.getText();
-        String Time = TimeOfServiceCompletion.getText();
         String Cost = CostPerformingService.getText();
 
-        if (!Name.equals("") && !Registered.equals("") && !Mail.equals("") && !Phone.equals("") && !Time.equals("") && !Cost.equals("")) {
+        if (!Name.equals("") && !Registered.equals("") && !Mail.equals("") && !Phone.equals("") && !Cost.equals("")) {
             ServicePerformed ServicePerformed = new ServicePerformed(Name, Registered, Mail, Phone, Cost);
             dbHandler.signServiceAdmin(ServicePerformed);
             dbHandler.signService(ServicePerformed);
@@ -249,6 +248,7 @@ public class Admin {
             Deleting deleting = new Deleting(name, nameId, ID);
             dbHandler.deletingLine(deleting);
 
+
             DeleteServices.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent actionEvent) {
@@ -268,6 +268,7 @@ public class Admin {
                 }
             });
         }
+        ClikUpdateService();
     }
 
     //удаление аккаунта
@@ -302,5 +303,6 @@ public class Admin {
                 }
             });
         }
+        ClikUpdateUser();
     }
 }

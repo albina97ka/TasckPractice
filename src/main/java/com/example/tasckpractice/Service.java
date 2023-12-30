@@ -1,19 +1,18 @@
 package com.example.tasckpractice;
 public class Service {
     int idRegisteredService;
-    String UserNameService,ServiceRegistered,UserMailService,UserPhoneService,UserTimeService,UserCostService;
+    String UserNameService,ServiceRegistered,UserMailService,UserPhoneService,UserCostService;
 
-    public Service(int idRegisteredService, String userNameService, String serviceRegistered, String userMailService, String userPhoneService, String userTimeService, String userCostService) {
+    public Service(int idRegisteredService, String userNameService, String serviceRegistered, String userMailService, String userPhoneService, String userCostService) {
         this.idRegisteredService = idRegisteredService;
         UserNameService = userNameService;
         ServiceRegistered = serviceRegistered;
         UserMailService = userMailService;
         UserPhoneService = userPhoneService;
-        UserTimeService = userTimeService;
         UserCostService = userCostService;
     }
 
-    public Service(String name, String registered, String mail, String phone, String time, String cost) {
+    public Service(String name, String registered, String mail, String phone, String cost) {
     }
 
     public int getIdRegisteredService() {
@@ -54,14 +53,6 @@ public class Service {
 
     public void setUserPhoneService(String userPhoneService) {
         UserPhoneService = userPhoneService;
-    }
-
-    public String getUserTimeServicee() {
-        return UserTimeService;
-    }
-
-    public void setUserTimeService(String userTimeService) {
-        UserTimeService = userTimeService;
     }
 
     public String getUserCostService() {
