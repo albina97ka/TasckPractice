@@ -58,9 +58,9 @@ public class Controller {
     }
 
     private void loginUser(String loginText, String loginPass) {
-        String url = "jdbc:mysql://localhost:3306/author?useSSL=true&requireSSL=true&verifyServerCertificate=true";
-        try (Connection connection = DriverManager.getConnection(url, "admin", "12345")) {
-            String query = "SELECT login, password, isAdmin FROM userdata WHERE login = ? AND password = ?";
+        String url = "jdbc:mysql://localhost:3306/author?useSSL=true&requireSSL=true&serverTimezone=UTC";
+        try (Connection connection = DriverManager.getConnection(url, "root", "12345678")) {
+            String query = "SELECT login, password, isAdmin FROM users WHERE login = ? AND password = ?";
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, loginText);
             statement.setString(2, loginPass);
@@ -101,7 +101,7 @@ public class Controller {
                 }
             }
         } catch (SQLException | IOException e) {
-            e.printStackTrace(); // замените этот код на обработку исключения по вашим потребностям
+            e.printStackTrace();
         }
     }
 
@@ -113,7 +113,7 @@ public class Controller {
             for (byte a : hashBytes) {
                 String hex = Integer.toHexString(0xff & a);
                 if (hex.length() == 1) {
-                    hexString.append('0');
+                    hexString.append("0");
                 }
                 hexString.append(hex);
             }

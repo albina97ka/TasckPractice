@@ -20,8 +20,8 @@ public class DatabaseHandler extends Config {
 
     public void signUser(User user) {
         String insert = "INSERT INTO " + Const.USER_TABLE + "(" + Const.USER_FIRSTNAME + "," + Const.USER_LASTNAME + "," + Const.USER_NUMBER + "," + Const.USER_MAIL + "," +
-                Const.USER_LOGIN + "," + Const.USER_PASSWORD + "," + Const.USER_SERVICE +
-                ")" + "VALUES(?,?,?,?,?,?,?)";
+                Const.USER_LOGIN + "," + Const.USER_PASSWORD + "," + Const.USER_SERVICE + "," + Const.USER_ISADMIN +
+                ")" + "VALUES(?,?,?,?,?,?,?,?)";
         try {
             PreparedStatement prSt = this.getDbConnection().prepareStatement(insert);
             prSt.setString(1, user.getFirstName());

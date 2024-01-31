@@ -11,6 +11,7 @@ public class Const {
     public static final String USER_LOGIN = "login";
     public static final String USER_PASSWORD = "password";
     public static final String USER_SERVICE = "service";
+    public static final String USER_ISADMIN = "isAdmin";
     //База данных зарегистрированных заявок
     public static final String SERVICEADMIN_TABLE="registeredservice";
     public static final String SERVICEADMIN_ID="idRegisteredService";
