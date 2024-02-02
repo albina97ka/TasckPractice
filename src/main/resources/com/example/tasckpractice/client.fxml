@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.Controller">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tasckpractice.Client">
+   <children>
+      <ImageView fitHeight="87.0" fitWidth="211.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@050d6856cc597f8cb18539f212d26fb1.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="button" layoutX="286.0" layoutY="344.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="129.0" style="-fx-background-color: #2E3348;" text="Рассчитать " textFill="#fcf3f3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="label" layoutX="226.0" layoutY="264.0" prefHeight="66.0" prefWidth="249.0" />
+      <RadioButton fx:id="radio_s" layoutX="374.0" layoutY="192.0" mnemonicParsing="false" text="С рабочими">
+         <toggleGroup>
+            <ToggleGroup fx:id="work" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radio_b" layoutX="373.0" layoutY="217.0" mnemonicParsing="false" text="Без рабочих" toggleGroup="$work" />
+      <CheckBox fx:id="check_dz" layoutX="373.0" layoutY="127.0" mnemonicParsing="false" text="Дизайн" />
+      <CheckBox fx:id="check_pt" layoutX="373.0" layoutY="153.0" mnemonicParsing="false" text="Планирование территории" />
+      <Label layoutX="230.0" layoutY="40.0" prefHeight="35.0" prefWidth="241.0" text="РАСЧЁТ СТОИМОСТИ">
+         <font>
+            <Font name="System Italic" size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="combobox_work" layoutX="181.0" layoutY="132.0" prefWidth="150.0" />
+      <ComboBox fx:id="combobox_s" layoutX="181.0" layoutY="170.0" prefWidth="150.0" />
+      <Button fx:id="back" layoutX="596.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" style="-fx-background-color: #2E3348;" text="Назад" textFill="#fff9f9" />
+   </children>
 </AnchorPane>
