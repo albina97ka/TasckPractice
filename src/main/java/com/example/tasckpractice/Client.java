@@ -22,6 +22,8 @@ public class Client {
     @FXML
     private CheckBox check_pt;
     @FXML
+    private CheckBox check_r;
+    @FXML
     private ComboBox<String> combobox_s;
     @FXML
     private ComboBox<String> combobox_work;
@@ -36,19 +38,22 @@ public class Client {
     private void calculateCost() {
         double baseCost = 0; // Базовая стоимость работы
 
-        // Увеличение или уменьшение стоимости в зависимости от выбранных параметров
+        // Увеличение стоимости на основе выбранных флажков
         if (check_dz.isSelected()) {
-            baseCost += 15000; // Увеличить стоимость
+            baseCost += 25000;
         }
         if (check_pt.isSelected()) {
-            baseCost += 10000;
+            baseCost += 80000;
+        }
+        if (check_r.isSelected()) {
+            baseCost += 150000;
         }
 
         // Учитывание выбора радио кнопок
-        if (radio_b.isSelected()) {
-            baseCost += 40000; // Увеличить стоимость
-        } else if (radio_s.isSelected()) {
-            baseCost = 0; // Уменьшить стоимость
+        if (radio_s.isSelected()) {
+            baseCost += 450000;
+        } else if (radio_b.isSelected()) {
+            baseCost += 0;
         }
 
         // Учитывание выбора из combobox
@@ -59,16 +64,13 @@ public class Client {
                     baseCost += 1500000;
                     break;
                 case "Многоквартирный дом":
-                    baseCost += 20000000;
+                    baseCost += 150000000;
                     break;
                 case "Общественное здание":
-                    baseCost += 15000000;
-                    break;
-                case "Ремонт":
-                    baseCost += 200000;
+                    baseCost += 20000000;
                     break;
                 case "Другое":
-                    baseCost += 150000;
+                    baseCost += 50000;
                     break;
             }
         }
@@ -76,30 +78,30 @@ public class Client {
             if (selectedSize != null) {
                 switch (selectedSize) {
                     case "Менее 10кв":
-                        baseCost += 5000;
+                        baseCost += 50000;
                         break;
                     case "10 - 40кв":
-                        baseCost += 10000;
+                        baseCost += 250000;
                         break;
                     case "40 - 100кв":
-                        baseCost += 40000;
+                        baseCost += 500000;
                         break;
                     case "100 - 250кв":
-                        baseCost += 100000;
+                        baseCost += 1000000;
                         break;
                     case "250+кв":
-                        baseCost += 400000;
+                        baseCost += 4000000;
                         break;
                 }
             }
 
             // Отобразить стоимость в label
-            label.setText("Стоимость работы от: " + baseCost + " руб.");
+            label.setText("Стоимость работы от: " + baseCost + " руб");
         }
 
         @FXML
         void initialize() {
-            ObservableList<String> list = FXCollections.observableArrayList("Жилой дом", "Многоквартирный дом", "Общественное здание", "Ремонт", "Другое");
+            ObservableList<String> list = FXCollections.observableArrayList("Жилой дом", "Многоквартирный дом", "Общественное здание", "Другое");
             combobox_work.setItems(list);
 
             ObservableList<String> s = FXCollections.observableArrayList("Менее 10кв", "10 - 40кв", "40 - 100кв", "100 - 250кв", "250+ кв");

@@ -23,21 +23,25 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="label" layoutX="226.0" layoutY="264.0" prefHeight="66.0" prefWidth="249.0" />
-      <RadioButton fx:id="radio_s" layoutX="374.0" layoutY="192.0" mnemonicParsing="false" text="С рабочими">
+      <Label fx:id="label" alignment="CENTER" layoutX="88.0" layoutY="268.0" prefHeight="66.0" prefWidth="525.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="radio_s" layoutX="375.0" layoutY="209.0" mnemonicParsing="false" text="С рабочими">
          <toggleGroup>
             <ToggleGroup fx:id="work" />
          </toggleGroup></RadioButton>
-      <RadioButton fx:id="radio_b" layoutX="373.0" layoutY="217.0" mnemonicParsing="false" text="Без рабочих" toggleGroup="$work" />
+      <RadioButton fx:id="radio_b" layoutX="375.0" layoutY="232.0" mnemonicParsing="false" text="Без рабочих" toggleGroup="$work" />
       <CheckBox fx:id="check_dz" layoutX="373.0" layoutY="127.0" mnemonicParsing="false" text="Дизайн" />
-      <CheckBox fx:id="check_pt" layoutX="373.0" layoutY="153.0" mnemonicParsing="false" text="Планирование территории" />
+      <CheckBox fx:id="check_pt" layoutX="373.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="177.0" text="Планирование территории" />
       <Label layoutX="230.0" layoutY="40.0" prefHeight="35.0" prefWidth="241.0" text="РАСЧЁТ СТОИМОСТИ">
          <font>
             <Font name="System Italic" size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="combobox_work" layoutX="181.0" layoutY="132.0" prefWidth="150.0" />
-      <ComboBox fx:id="combobox_s" layoutX="181.0" layoutY="170.0" prefWidth="150.0" />
+      <ComboBox fx:id="combobox_work" layoutX="181.0" layoutY="132.0" prefWidth="150.0" promptText="Вид работы" />
+      <ComboBox fx:id="combobox_s" layoutX="181.0" layoutY="170.0" prefWidth="150.0" promptText="Площадь" />
       <Button fx:id="back" layoutX="596.0" layoutY="14.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="90.0" style="-fx-background-color: #2E3348;" text="Назад" textFill="#fff9f9" />
+      <CheckBox fx:id="check_r" layoutX="373.0" layoutY="166.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Ремонт" />
    </children>
 </AnchorPane>
