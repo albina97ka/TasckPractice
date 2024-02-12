@@ -17,7 +17,7 @@
 ## Установка проекта
 Перейдите по ссылке на github и скачайте зип файл или скопируйте ссылку:
 
-[[project.com](https://disk.yandex.ru/d/aoHMf6EZUb50Ag)](https://github.com/albina97ka/TasckPractice)
+(https://disk.yandex.ru/d/aoHMf6EZUb50Ag)](https://github.com/albina97ka/TasckPractice)
 
 Распакуйте зип файл и запустите среде разработке. Если вы скопировали ссылку, то вставьте ее в среду разработки для импорта.
 Убедитесь, что у вас подключенны нужные библеотеки и нужна база данных.
@@ -25,5 +25,7 @@
 - Цыка Альбина
 ## Документация 
 https://github.com/albina97ka/TasckPractice.wiki.git
+
 https://github.com/albina97ka/TasckPractice.wiki.git
+
 https://github.com/albina97ka/TasckPractice.wiki.git
